@@ -1,0 +1,17 @@
+<svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-park:car-battery" clip-path="url(#clip0_14826_27799)">
+<rect width="26" height="26" transform="translate(0.199219 0.25293)" fill="white"/>
+<g id="Group">
+<path id="Vector" d="M23.4909 6.75293H1.82422M23.4909 6.75293V23.0029H1.82422V6.75293M23.4909 6.75293H19.1576V3.50293H23.4909V6.75293ZM1.82422 6.75293V3.50293H6.15755V6.75293H1.82422ZM5.07422 11.6279H8.32422M16.9909 11.6279H20.2409M6.69922 10.0029V13.2529" stroke="url(#paint0_linear_14826_27799)" stroke-width="2"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_14826_27799" x1="7.29013" y1="2.32111" x2="17.0401" y2="23.2984" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CDEC0F"/>
+<stop offset="1" stop-color="#23B14D"/>
+</linearGradient>
+<clipPath id="clip0_14826_27799">
+<rect width="26" height="26" fill="white" transform="translate(0.199219 0.25293)"/>
+</clipPath>
+</defs>
+</svg>
