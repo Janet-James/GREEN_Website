@@ -542,7 +542,7 @@ function LoadData(){
 // ----- Product Get List ----
 function ProductGetList() {
   $.ajax({
-      url: 'https://gprogress.green.com.pg/product_dropdown_list/',
+      url: 'https://app-gsolve.green.com.pg/product_dropdown_list/',
       contentType: 'application/json',
       dataType: 'json',
       success: function (result) {
@@ -586,7 +586,7 @@ function ProductGetList() {
 // ----- Organization List -----
 function OrganizationList(){
   $.ajax({
-      url: 'https://gprogress.green.com.pg/organsation_dropdown_list/',
+      url: 'https://app-gsolve.green.com.pg/organsation_dropdown_list/',
       contentType: "application/json",
       dataType: "json",
       success: function (result) {
@@ -700,7 +700,7 @@ function ProductAddList(){
       $('#productAppend').prop('disabled', true);
       $('#productAppend').css('cursor', 'not-allowed');
       $.ajax({
-          url: 'https://gprogress.green.com.pg/add/product_list/',
+          url: 'https://app-gsolve.green.com.pg/add/product_list/',
           type: 'post',
           data: {
               'product_name': product_add_list,
@@ -762,7 +762,7 @@ function MobileProductAddList(){
       $('#mobileproductAppend').prop('disabled', true);
       $('#mobileproductAppend').css('cursor', 'not-allowed');
       $.ajax({
-          url: 'https://gprogress.green.com.pg/add/product_list/',
+          url: 'https://app-gsolve.green.com.pg/add/product_list/',
           type: 'post',
           data: {
               'product_name': product_add_list,
@@ -927,7 +927,7 @@ function SupplierPartnerSubmitBtn(){
     var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
 
     $.ajax({
-        url: 'https://gprogress.green.com.pg/submit/supplier_partner/',
+        url: 'https://app-gsolve.green.com.pg/submit/supplier_partner/',
         type: 'post',
         data: {
           'supplier_company_name': supplier_company_name,

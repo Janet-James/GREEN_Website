@@ -28,7 +28,7 @@ function News_Letter_Subscribe(){
    }else{
 
    $.ajax({
-    url: 'https://gprogress.green.com.pg/submit/news_letter/',
+    url: 'https://app-gsolve.green.com.pg/submit/news_letter/',
     type: 'post',
     data: {
        'news_letter_email': news_letter_email,

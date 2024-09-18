@@ -98,7 +98,7 @@ function Client_PartnerActivityStatus(){
     var user_country_code = '';
   }
   $.ajax({
-      url: 'https://gprogress.green.com.pg/client_partner_database_insertion/',
+      url: 'https://app-gsolve.green.com.pg/client_partner_database_insertion/',
       type: 'post',
       data: {
               'clientID': Client_Id,
@@ -207,7 +207,7 @@ function SentMessage(){
   source_of_meaasge = 3396
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   $.ajax({
-    url: 'https://gprogress.green.com.pg/customer/chat_box/',
+    url: 'https://app-gsolve.green.com.pg/customer/chat_box/',
     type: 'post',
     data: {
       'client_id': Client_Id,
@@ -236,7 +236,7 @@ function ForgotPasswordBtn() {
   $('#forgot_passwordBtn').css('cursor', 'not-allowed');
   
   $.ajax({
-    url: 'https://gprogress.green.com.pg/client_partner_forgotpassword/',
+    url: 'https://app-gsolve.green.com.pg/client_partner_forgotpassword/',
     type: 'post',
     data: {'client_id': Client_Id, 'client_email': Client_PersonEmail} 
   }).done(function (json_data) {
@@ -304,7 +304,7 @@ $(document).ready(function () {
   Client_Comp_ID = JSON.parse(storedClientComID)
   if (Client_Id) {
     $.ajax({
-      url: 'https://gprogress.green.com.pg/customer/chat_history/',
+      url: 'https://app-gsolve.green.com.pg/customer/chat_history/',
       type: 'post',
       data: {
           'clientID': Client_Id,
@@ -518,7 +518,7 @@ function SubmitServiceCallLog(){
     $('#serviceCallSubmitButton').css('cursor', 'not-allowed');
     var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
     $.ajax({
-        url: 'https://gprogress.green.com.pg/submit/client_partner/service_call_log/',
+        url: 'https://app-gsolve.green.com.pg/submit/client_partner/service_call_log/',
         type: 'post',
         data: {
           'service_call_title': service_call_title,
@@ -574,7 +574,7 @@ function SubmitServiceRequest(){
   $('#serviceRequestBtn').css('cursor', 'not-allowed');
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   $.ajax({
-      url: 'https://gprogress.green.com.pg/submit/client_partner/service_request/',
+      url: 'https://app-gsolve.green.com.pg/submit/client_partner/service_request/',
       type: 'post',
       data: {
         'service_req_common_service': service_req_common_service,
@@ -858,7 +858,7 @@ let ServiceReqresponse;
 function ClientPartnerServiceRequestHistory(){
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   $.ajax({
-    url: 'https://gprogress.green.com.pg/client_partner/service_request/history/',
+    url: 'https://app-gsolve.green.com.pg/client_partner/service_request/history/',
     type: 'post',
     data: {
       'client_id': Client_Id,
@@ -993,7 +993,7 @@ $("#ServiceCallTicketStatus").change(function(){
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   if(Client_Id){
   $.ajax({
-    url: 'https://gprogress.green.com.pg/client_partner/service_call/history/',
+    url: 'https://app-gsolve.green.com.pg/client_partner/service_call/history/',
     type: 'post',
     data: {
       'client_id': Client_Id,
@@ -1023,7 +1023,7 @@ function CalculateAverageResponseTime() {
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   if(Client_Id){
   $.ajax({
-       url: 'https://gprogress.green.com.pg/calculate/client_partner/average_response_time/',
+       url: 'https://app-gsolve.green.com.pg/calculate/client_partner/average_response_time/',
        type: 'post',
        data: {
            'client_id': Client_Id,
@@ -1112,7 +1112,7 @@ function CalculateAverageResponseTime() {
 function CustomerReviewChart(){
   if(Client_Id){
   $.ajax({
-       url: 'https://gprogress.green.com.pg/calculate/client_partner/customer_score/',
+       url: 'https://app-gsolve.green.com.pg/calculate/client_partner/customer_score/',
        type: 'post',
        data: {
            'client_id': Client_Id,
@@ -1367,7 +1367,7 @@ FinancialROI();
 function FinancialROI(){
 var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
 $.ajax({
-    url: 'https://gprogress.green.com.pg/clientPartner_finacial_calc/',
+    url: 'https://app-gsolve.green.com.pg/clientPartner_finacial_calc/',
     type: 'post',
     data: {
         'client_id': Client_Id,
@@ -1426,7 +1426,7 @@ $.ajax({
 function CalculateLCOE() {
 var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
 $.ajax({
-    url: 'https://gprogress.green.com.pg/calculate/calculate_lcoe/',
+    url: 'https://app-gsolve.green.com.pg/calculate/calculate_lcoe/',
     type: 'post',
     data: {
      'client_id': Client_Id,
@@ -1470,7 +1470,7 @@ $.ajax({
 function PayBackChart() {
 var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
 $.ajax({
-    url: 'https://gprogress.green.com.pg/clientPartner_payback/',
+    url: 'https://app-gsolve.green.com.pg/clientPartner_payback/',
     type: 'post',
     data: {
         'client_id': Client_Id,
@@ -1583,7 +1583,7 @@ $.ajax({
 function ROIChart() {
     var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
     $.ajax({
-     url: 'https://gprogress.green.com.pg/clientPartner_calculate_roi/',
+     url: 'https://app-gsolve.green.com.pg/clientPartner_calculate_roi/',
      type: 'post',
      data: {
          'client_id': Client_Id,
@@ -1724,7 +1724,7 @@ function irrYAxisLabel(value) {
 function InternalRateReturnChart() {
 var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
 $.ajax({
-     url: 'https://gprogress.green.com.pg/calculate/internal_rate_of_return/',
+     url: 'https://app-gsolve.green.com.pg/calculate/internal_rate_of_return/',
      type: 'post',
      data: {
          'client_id': Client_Id,
@@ -1933,7 +1933,7 @@ $("#RevenueReportFilter").change(function() {
   revenueFilterYear = $(this).val();
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   $.ajax({
-    url: 'https://gprogress.green.com.pg/accounts_and_statement_cal/',
+    url: 'https://app-gsolve.green.com.pg/accounts_and_statement_cal/',
     type: 'post',
     data: {
         'client_id': Client_Id,
@@ -2295,7 +2295,7 @@ $("#CarbonEmissionYearFilter").change(function(){
   var browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   $.ajax({
-    url: 'https://gprogress.green.com.pg/environmental_saving/calculation/',
+    url: 'https://app-gsolve.green.com.pg/environmental_saving/calculation/',
     type: 'post',
     data: {
         client_id:Client_Id, date:isoDateString, timezoneOffset:timezoneOffset, browserTimezone:browserTimezone, CarbonEmissionFilterYear: CarbonEmissionFilterYear,
@@ -2412,7 +2412,7 @@ function SiteMonitoring(){
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   if(Client_Id){
   $.ajax({
-      url: 'https://gprogress.green.com.pg/solarhistorylist/',
+      url: 'https://app-gsolve.green.com.pg/solarhistorylist/',
       type: 'post',
       data: {
           'client_id': Client_Id,
@@ -2575,7 +2575,7 @@ function CurrentDayHistoryMetrix(filterData){
   var timezoneOffset = selectedDate.utcOffset();
   var browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   $.ajax({
-       url: 'https://gprogress.green.com.pg/clientpartner_site_monitering/',
+       url: 'https://app-gsolve.green.com.pg/clientpartner_site_monitering/',
        type: 'post',
        data: { date: isoDateString, timezoneOffset: timezoneOffset, browserTimezone:browserTimezone, filterdData:"days", solar_project_id:globalProjectId},
       }).done(function (json_data) {
@@ -2750,7 +2750,7 @@ function SiteMonitoringHistoryFilter(filterData){
   var timezoneOffset = selectedDate.utcOffset();
   var browserTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
   $.ajax({
-       url: 'https://gprogress.green.com.pg/clientpartner_site_monitering/',
+       url: 'https://app-gsolve.green.com.pg/clientpartner_site_monitering/',
        type: 'post',
        data: { date: isoDateString, timezoneOffset: timezoneOffset, browserTimezone:browserTimezone, filterdData:filterData, solar_project_id:globalProjectId},
   }).done(function (json_data) {
@@ -3168,7 +3168,7 @@ function UserActivityTracking(){
     var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
     if(moduleName == "UserLogOut"){
       $.ajax({
-        url: 'https://gprogress.green.com.pg/client_partner_user_activity/',
+        url: 'https://app-gsolve.green.com.pg/client_partner_user_activity/',
         type: 'post',
         data: {
           'client_id': Client_Id,
@@ -3184,7 +3184,7 @@ function UserActivityTracking(){
       user_activities = []
     }else{
     $.ajax({
-      url: 'https://gprogress.green.com.pg/client_partner_user_activity/',
+      url: 'https://app-gsolve.green.com.pg/client_partner_user_activity/',
       type: 'post',
       data: {
         'client_id': Client_Id,
@@ -3203,7 +3203,7 @@ function UserActivityTracking(){
 
 function project_monitoring() {
   $.ajax({
-    url: "https://gprogress.green.com.pg/client_partner_project_monitoring/",
+    url: "https://app-gsolve.green.com.pg/client_partner_project_monitoring/",
     method: "GET",
   })
   .done(function (json_data) {
@@ -3925,7 +3925,7 @@ function ClientPartnerRegistration(){
     $('#client_partner_registration').prop('disabled', true);
     $('#client_partner_registration').css('cursor', 'not-allowed');
     $.ajax({
-      url: 'https://gprogress.green.com.pg/client_partner_registration/',
+      url: 'https://app-gsolve.green.com.pg/client_partner_registration/',
       type: 'post',
       data: {
         'firstname': firstname,

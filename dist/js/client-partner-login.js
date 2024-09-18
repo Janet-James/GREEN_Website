@@ -37,7 +37,7 @@ $(document).ready(function () {
       $('#emailValidationBtn').prop('disabled', true);
       $('#emailValidationBtn').css('cursor', 'not-allowed');
       $.ajax({
-        url: 'https://gprogress.green.com.pg/clientpartner_email_verification/',
+        url: 'https://app-gsolve.green.com.pg/clientpartner_email_verification/',
         type: 'post',
         data: {'client_username': clientpartner_username} 
       }).done(function (json_data) {

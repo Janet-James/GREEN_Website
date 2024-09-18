@@ -28,7 +28,7 @@ $(document).ready(function () {
             }, 1000)
             var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
             $.ajax({
-                url: 'https://gprogress.green.com.pg/client_partner_temporary_code_check/',
+                url: 'https://app-gsolve.green.com.pg/client_partner_temporary_code_check/',
                 type: 'post',
                 data: {
                     'client_email': client_email,
@@ -82,7 +82,7 @@ function ClientPartnerForgotPassword() {
         $('#forgotpasswordBtn').prop('disabled', true);
         $('#forgotpasswordBtn').css('cursor', 'not-allowed');
         $.ajax({
-            url: 'https://gprogress.green.com.pg/update_forgotpassword/',
+            url: 'https://app-gsolve.green.com.pg/update_forgotpassword/',
             type: 'post',
             data: {
                 'client_id': client_id,

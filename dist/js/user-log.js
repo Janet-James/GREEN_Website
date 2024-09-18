@@ -81,7 +81,7 @@ function GetUserLogDetails(pageNumber) {
     $('#UserActivityAppend').empty();
     var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
     $.ajax({
-        url: "https://gprogress.green.com.pg/user_ativity/",
+        url: "https://app-gsolve.green.com.pg/user_ativity/",
         method: "post",
         data: {
             "filterMode": filterMode,
@@ -359,7 +359,7 @@ function WebTrafficDetails() {
     }
     var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
     $.ajax({
-        url: "https://gprogress.green.com.pg/individual_user_log/",
+        url: "https://app-gsolve.green.com.pg/individual_user_log/",
         method: "post",
         data: {
             "filterMode": filterMode,

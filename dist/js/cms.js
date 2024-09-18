@@ -4,7 +4,7 @@ $(document).ready(function(){
 
 function DailyEventLoad(){
     $.ajax({
-        url: 'https://gprogress.green.com.pg/cms/event_generator/',
+        url: 'https://app-gsolve.green.com.pg/cms/event_generator/',
         contentType: 'application/json',
         dataType: 'json',
         success: function (result) {

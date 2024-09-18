@@ -73,7 +73,7 @@ function getMobileCode(){
 function LatestJobOpening(){   
   var loadedData = []; // store loaded data
   $.ajax({
-      url: 'https://gprogress.green.com.pg/get/jobcategory_list/',
+      url: 'https://app-gsolve.green.com.pg/get/jobcategory_list/',
       contentType: "application/json",
       dataType: "json",
       success: function (result) {
@@ -153,7 +153,7 @@ function LatestJobOpening(){
 // --- Job Category List ----
 function JobCategoeryList(){
   $.ajax({
-      url: 'https://gprogress.green.com.pg/get/jobcategory_list/',
+      url: 'https://app-gsolve.green.com.pg/get/jobcategory_list/',
       contentType: "application/json",
       dataType: "json",
       success: function (result) {
@@ -227,13 +227,13 @@ function JobCategoeryList(){
 // ---- Job Description ----
 function JobApplyForm(){
   $.ajax({
-      url: 'https://gprogress.green.com.pg/get/jobcategory_list/',
+      url: 'https://app-gsolve.green.com.pg/get/jobcategory_list/',
       contentType: "application/json",
       dataType: "json",
       success: function (result) {
           // Country Drop-Down
           $.ajax({
-            url: 'https://gprogress.green.com.pg/get/country_dropdown_list/',
+            url: 'https://app-gsolve.green.com.pg/get/country_dropdown_list/',
             contentType: "application/json",
             dataType: "json",
             success: function(result) {
@@ -663,7 +663,7 @@ $(document).on('submit', `.applyform${positionName}`, function (event) {
     $(`#${positionName}jobPositionSubmitBtn`).prop('disabled', true);
     $(`#${positionName}jobPositionSubmitBtn`).css('cursor', 'not-allowed');
         $.ajax({
-            url: 'https://gprogress.green.com.pg/submit/jobapplication/',
+            url: 'https://app-gsolve.green.com.pg/submit/jobapplication/',
             type: 'post',
             data: {
                 'firstname': firstnameInput,
@@ -724,7 +724,7 @@ $(document).on('submit', `.applyform${positionName}`, function (event) {
 // --- Job Query Raise ---
 function JobQueryRaiseForm(){
   $.ajax({
-      url: 'https://gprogress.green.com.pg/get/jobquery_dropdown_list/',
+      url: 'https://app-gsolve.green.com.pg/get/jobquery_dropdown_list/',
       contentType: "application/json",
       dataType: "json",
       success: function (result) {
@@ -1097,7 +1097,7 @@ function Sent_Query(){
       $('#querysubmit').prop('disabled', true);
       $('#querysubmit').css('cursor', 'not-allowed');
       $.ajax({
-          url: 'https://gprogress.green.com.pg/submit/jobquery/',
+          url: 'https://app-gsolve.green.com.pg/submit/jobquery/',
           type: 'post',
           data: {
               'firstname'     : firstnameInput,
@@ -1152,7 +1152,7 @@ function ReachUs_Form_Submition() {
     $('#btnGetCaptcha').prop('disabled', true);
     $('#btnGetCaptcha').css('cursor', 'not-allowed');
     $.ajax({
-      url: 'https://gprogress.green.com.pg/submit/reach_us/',
+      url: 'https://app-gsolve.green.com.pg/submit/reach_us/',
       type: 'post',
       data: {
         'firstname': nameInput,
@@ -1192,7 +1192,7 @@ function LoginUser() {
   var passwordInput = $('#login_password').val().trim();
   var csrf_data = $("input[name=csrfmiddlewaretoken]").val();
   $.ajax({
-      url: 'https://gprogress.green.com.pg/login/user/',
+      url: 'https://app-gsolve.green.com.pg/login/user/',
       type: 'post',
       data: {
           'username': usernameInput,
@@ -1239,7 +1239,7 @@ var storedData = localStorage.getItem('globalResponseData');
 var data = JSON.parse(storedData)
 if (data) {
   $.ajax({
-    url: 'https://gprogress.green.com.pg/login/user/get_details/',
+    url: 'https://app-gsolve.green.com.pg/login/user/get_details/',
     type: 'post',
     data: {
         'deal_id': data.UserDetails.deal_id,
@@ -1298,7 +1298,7 @@ function handleCodeResponse(data) {
   // --- Ajax Implementation Login User Get Details ---
   $(document).ready(function() {
     $.ajax({
-        url: 'https://gprogress.green.com.pg/dashboard/user/get_details/',
+        url: 'https://app-gsolve.green.com.pg/dashboard/user/get_details/',
         method: 'post',
         data: {
             "position_id": login_user_details[0].position_id, // Select the first position by default
@@ -1321,7 +1321,7 @@ function handleCodeResponse(data) {
     // --- Ajax Implementation Login User Get Details ---
     $(document).ready(function() {
       $.ajax({
-          url: 'https://gprogress.green.com.pg/dashboard/user/get_details/',
+          url: 'https://app-gsolve.green.com.pg/dashboard/user/get_details/',
           method: 'post',
           data: {
              "position_id": selectedPositionId,
